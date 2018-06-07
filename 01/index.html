@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Join VDarts</title>
 	<link rel="stylesheet" href="./css/swiper.min.css">
-	<link rel="stylesheet" href="./css/index.css?201806071356">
+	<link rel="stylesheet" href="./css/index.css?201806071429">
 	<script src="./js/jquery-3.1.1.min.js"></script>
 	<script src="./js/swiper.min.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -142,6 +142,7 @@
 							<span>電影院</span>
 						</div>
 					</div>
+					<div id="page2-swiper-pagination" class="swiper-pagination"></div>
 				</div>
 			</div>
 		</section>
@@ -181,7 +182,7 @@
 		<section class="page5-2">
 			<div class="wrapper">
 				<div class="page5-2-video">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/9nP3NFuTRVM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/9nP3NFuTRVM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</div>
 			</div>
 		</section>
@@ -190,7 +191,7 @@
 				<div class="page6-title">全智能聯網飛鏢機</div>
 				<div class="page6-sub-title">
 					<span>三十</span>
-					<span>餘款連網飛鏢遊戲，天天</span>
+					<span>餘款聯網飛鏢遊戲，天天</span>
 					<span>嗨翻全場</span>
 				</div>
 				<div id="page6-swiper" class="swiper-container">
@@ -220,6 +221,7 @@
 							<span>01減分賽</span>
 						</div>
 					</div>
+					<div id="page6-swiper-pagination" class="swiper-pagination"></div>
 				</div>
 				<div class="page6-item-box">
 					<div class="item">
@@ -334,6 +336,7 @@
 							<img src="./images/Page8/Pic-25.jpg" alt="">
 						</div>
 					</div>
+					<div id="page8-swiper-pagination" class="swiper-pagination"></div>
 				</div>
 				<h3 class="form-title">
 					<span>想要了解更多詳情，請填寫表單</span>
@@ -349,7 +352,7 @@
 						<input id="email" name="email" type="email" class="form-control" required placeholder="請填寫信箱...">
 					</div>
 					<div class="contact-box">
-						<label for="contact">內容諮詢</label>
+						<label for="contact"><span>*</span>內容諮詢</label>
 						<textarea name="" id="contact" cols="30" rows="10" placeholder="請填寫內容諮詢..."></textarea>
 					</div>
 					<button class="btn form-submit">索取產品資訊</button>
@@ -363,6 +366,10 @@
 
 	<script>
 		var swiper2 = new Swiper('#page2-swiper', {
+			pagination: {
+        		el: '#page2-swiper-pagination',
+				clickable: true,
+			},
 			slidesPerView: 3,
 			spaceBetween: 30,
 			breakpoints: {
@@ -387,6 +394,10 @@
 		var swiper6 = new Swiper('#page6-swiper', {
 			slidesPerView: 3,
 			spaceBetween: 30,
+			pagination: {
+        		el: '#page6-swiper-pagination',
+				clickable: true,
+			},
 			breakpoints: {
 				1024: {
 				slidesPerView: 4,
@@ -409,6 +420,10 @@
 		var swiper8 = new Swiper('#page8-swiper', {
 			slidesPerView: 3,
 			spaceBetween: 30,
+			pagination: {
+        		el: '#page8-swiper-pagination',
+				clickable: true,
+			},
 			breakpoints: {
 				1024: {
 				slidesPerView: 4,
