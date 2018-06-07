@@ -1,11 +1,11 @@
 $(document).ready(function() {
     var swiper2 = new Swiper('#page2-swiper', {
+        slidesPerView: 3,
+        spaceBetween: 30,
         pagination: {
             el: '#page2-swiper-pagination',
             clickable: true,
         },
-        slidesPerView: 3,
-        spaceBetween: 30,
         breakpoints: {
             1024: {
             slidesPerView: 4,
