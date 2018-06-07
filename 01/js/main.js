@@ -3,17 +3,17 @@ $(document).ready(function() {
         var lang=$(this).val()
         var langValue='';
         if(lang === 'tw'){
-            langValue='/index.html'
+            langValue='index.html'
         }else if(lang === 'en' ){
-            langValue='/index-en.html'
+            langValue='index-en.html'
         }else if(lang === 'jp' ){
-            langValue='/index-jp.html'
+            langValue='index-jp.html'
         }else if(lang === 'fr' ){
-            langValue='/index-en.html'
+            langValue='index-en.html'
         }else if(lang === 'es' ){
-            langValue='/index-es.html'
+            langValue='index-es.html'
         }else if(lang === 'kr' ){
-            langValue='/index-kr.html'
+            langValue='index-kr.html'
         }
         location.href=langValue
     })
