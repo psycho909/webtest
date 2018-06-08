@@ -3,7 +3,7 @@ $(document).ready(function() {
     $('#lang-menu').on('click',function(){
         var liNum=$('.lang-multi li').length
         var liHeight=Math.ceil($('.lang-multi li').outerHeight(true))
-        
+        $(this).toggleClass('active')
         if(menuClick){
             $('.lang-multi').css('height',liHeight*liNum)
             menuClick=!menuClick
