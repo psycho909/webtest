@@ -1,6 +1,20 @@
 $(document).ready(function() {
     var menuClick=true;
     var menuCheck=false;
+    var gobalLang=$('#app').attr('data-lang')
+    if(gobalLang === 'tw'){
+        $('.logo').attr('href','http://www.vdarts.tw/promotion/')
+    }else if(gobalLang === 'en' ){
+        $('.logo').attr('href','http://www.vdarts.tv/promotion/index-en.html')
+    }else if(gobalLang === 'jp' ){
+        $('.logo').attr('href','http://www.vdarts.jp/promotion/index-jp.html')
+    }else if(gobalLang === 'fr' ){
+        $('.logo').attr('href','http://www.vdarts.tv/promotion/index-fr.html')
+    }else if(gobalLang === 'es' ){
+        $('.logo').attr('href','http://www.vdarts.tv/promotion/index-es.html')
+    }else if(gobalLang === 'kr' ){
+        $('.logo').attr('href','http://www.vdarts.kr/promotion/index-kr.html')
+    }
     $(document).on('click',function(e){
         e.stopPropagation()
         if(menuCheck){
@@ -165,6 +179,16 @@ $(document).ready(function() {
             scrollTop:0
         },500)
     })
+    $('#contact').on('keyup',function(){
+        if($(this).val() !== ''){
+            $(this).removeClass('warining')
+        }
+    })
+    $('#email').on('keyup',function(){
+        if($(this).val() !== ''){
+            $(this).removeClass('warining')
+        }
+    })
     $('#submit').on('click', function(e) {
         e.preventDefault();
         var lang=$('#app').attr('data-lang');
@@ -174,10 +198,12 @@ $(document).ready(function() {
         var info = $('#info').val();
 
         if(contact == '') {
+            $('#contact').addClass('warining')
             alert(langNotice(lang).contact);
             return false;
         }
         if(!validateEmail(mail)) {
+            $('#email').addClass('warining')
             alert(langNotice(lang).mail);
             return false;
         }
