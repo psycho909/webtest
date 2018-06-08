@@ -1,15 +1,36 @@
 $(document).ready(function() {
     var menuClick=true;
-    $('#lang-menu').on('click',function(){
+    var menuCheck=false;
+    $(document).on('click',function(e){
+        e.stopPropagation()
+        if(menuCheck){
+            var liNum=$('.lang-multi li').length
+            var liHeight=Math.ceil($('.lang-multi li').outerHeight(true))
+            $(this).toggleClass('active')
+            if(menuClick){
+                $('.lang-multi').css('height',liHeight*liNum)
+                menuClick=!menuClick
+                menuCheck=true;
+            }else{
+                $('.lang-multi').css('height',0)
+                menuClick=!menuClick
+                menuCheck=false;
+            }
+        }
+    })
+    $('#lang-menu').on('click',function(e){
+        e.stopPropagation()
         var liNum=$('.lang-multi li').length
         var liHeight=Math.ceil($('.lang-multi li').outerHeight(true))
         $(this).toggleClass('active')
         if(menuClick){
             $('.lang-multi').css('height',liHeight*liNum)
             menuClick=!menuClick
+            menuCheck=true;
         }else{
             $('.lang-multi').css('height',0)
             menuClick=!menuClick
+            menuCheck=false;
         }
         $('.lang-multi li').on('click',function(){
             var lang=$(this).attr('data-value')
