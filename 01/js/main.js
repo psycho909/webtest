@@ -18,6 +18,13 @@ $(document).ready(function() {
             }
         }
     })
+    $('.bottom').on('click',function(){
+        var page1Top=$('.page1').outerHeight(true);
+        var headerTop=$('header').outerHeight(true);
+        $('html,body').animate({
+            scrollTop:page1Top-headerTop+'px'
+        },500)
+    })
     $('#lang-menu').on('click',function(e){
         e.stopPropagation()
         var liNum=$('.lang-multi li').length
