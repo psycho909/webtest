@@ -2,18 +2,19 @@ $(document).ready(function() {
     var menuClick=true;
     var menuCheck=false;
     var gobalLang=$('#app').attr('data-lang')
+    $('.logo').attr('target','_blank');
     if(gobalLang === 'tw'){
-        $('.logo').attr('href','http://www.vdarts.tw/promotion/')
+        $('.logo').attr('href','http://www.vdarts.tw/')
     }else if(gobalLang === 'en' ){
-        $('.logo').attr('href','http://www.vdarts.tv/promotion/index-en.html')
+        $('.logo').attr('href','http://www.vdarts.tv/?lang=en')
     }else if(gobalLang === 'jp' ){
-        $('.logo').attr('href','http://www.vdarts.jp/promotion/index-jp.html')
+        $('.logo').attr('href','http://www.vdarts.jp/?lang=jp')
     }else if(gobalLang === 'fr' ){
-        $('.logo').attr('href','http://www.vdarts.tv/promotion/index-fr.html')
+        $('.logo').attr('href','http://www.vdarts.tv/?lang=fr')
     }else if(gobalLang === 'es' ){
-        $('.logo').attr('href','http://www.vdarts.tv/promotion/index-es.html')
+        $('.logo').attr('href','http://www.vdarts.tv/?lang=es')
     }else if(gobalLang === 'kr' ){
-        $('.logo').attr('href','http://www.vdarts.kr/promotion/index-kr.html')
+        $('.logo').attr('href','http://www.vdarts.kr/?lang=kr')
     }
     $(document).on('click',function(e){
         e.stopPropagation()
