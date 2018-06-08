@@ -1,4 +1,34 @@
 $(document).ready(function() {
+    var menuClick=true;
+    $('#lang-menu').on('click',function(){
+        var liNum=$('.lang-multi li').length
+        var liHeight=Math.ceil($('.lang-multi li').outerHeight(true))
+        
+        if(menuClick){
+            $('.lang-multi').css('height',liHeight*liNum)
+            menuClick=!menuClick
+        }else{
+            $('.lang-multi').css('height',0)
+            menuClick=!menuClick
+        }
+        $('.lang-multi li').on('click',function(){
+            var lang=$(this).attr('data-value')
+            if(lang === 'tw'){
+                langValue='index.html'
+            }else if(lang === 'en' ){
+                langValue='index-en.html'
+            }else if(lang === 'jp' ){
+                langValue='index-jp.html'
+            }else if(lang === 'fr' ){
+                langValue='index-fr.html'
+            }else if(lang === 'es' ){
+                langValue='index-es.html'
+            }else if(lang === 'kr' ){
+                langValue='index-kr.html'
+            }
+            location.href=langValue
+        })
+    })
     $('#langs').on('change',function(){
         var lang=$(this).val()
         var langValue='';
@@ -9,7 +39,7 @@ $(document).ready(function() {
         }else if(lang === 'jp' ){
             langValue='index-jp.html'
         }else if(lang === 'fr' ){
-            langValue='index-en.html'
+            langValue='index-fr.html'
         }else if(lang === 'es' ){
             langValue='index-es.html'
         }else if(lang === 'kr' ){
