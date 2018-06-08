@@ -125,20 +125,15 @@ $(document).ready(function() {
         }
         $.ajax({
             method: 'GET',
-            url: 'session.key.php',
+            url: '../session.key.php',
             dataType : 'json'
         })
         .done(function( response ) {
             var key = response.key;
             $.ajax({
                 method: 'POST',
-                url: 'notification.php',
-                data: {
-                    contact: contact,
-                    mail : mail,
-                    info : info,
-                    key	 : key,
-                },
+                url: '../notification.php',
+                data: { contact, mail, info, key },
                 dataType : 'json'
             })
             .done(function( response ) {
