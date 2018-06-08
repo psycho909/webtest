@@ -22,7 +22,7 @@ $(document).ready(function() {
         var page1Top=$('.page1').outerHeight(true);
         var headerTop=$('header').outerHeight(true);
         $('html,body').animate({
-            scrollTop:page1Top-headerTop+'px'
+            scrollTop:page1Top-headerTop+1+'px'
         },500)
     })
     $('#lang-menu').on('click',function(e){
