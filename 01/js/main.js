@@ -2,6 +2,8 @@ $(document).ready(function() {
     var menuClick=true;
     var menuCheck=false;
     var gobalLang=$('#app').attr('data-lang')
+    var selectSpanWidth=$('#select-lang span').outerWidth(true);
+    $('.lang-multi').css('left',selectSpanWidth+'px')
     $('.logo').attr('target','_blank');
     if(gobalLang === 'tw'){
         $('.logo').attr('href','http://www.vdarts.tw/')
