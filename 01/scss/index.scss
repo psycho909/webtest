@@ -675,7 +675,9 @@ section{
 					}
 				}
 				.form-submit{
-					width: 50%;
+					// width: 60%;
+					min-width: 60%;
+					max-width: 80%;
 					border: none;
 					padding: 1rem 2.2rem;
 					font-size: 1.25rem;
@@ -815,7 +817,7 @@ footer{
 				padding: 6.2rem 1.2rem 3.2rem;
 				justify-content: center;
 				.page1-img-box{
-					margin-top: 8rem;
+					// margin-top: 8rem;
 				}
 			}
 		}
@@ -1173,6 +1175,8 @@ footer{
 			.form-submit{
 				margin:  0 auto;
 				width: 95%;
+				min-width: auto;
+				max-width: 100%;
 			}
 		}
 	}
@@ -1183,6 +1187,11 @@ footer{
 	}
 	section.page1 .wrapper .page1-img-box .page1-img{
 		max-width: 300px;
+	}
+}
+@media (max-height:723px){
+	section.page1{
+		min-height: auto;
 	}
 }
 @media (max-height:415px){
